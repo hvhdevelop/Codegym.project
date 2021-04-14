@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 4: Xây dựng lớp Animal</title>
+</head>
+
+<body>
+    <script>
+        class Animal {
+            constructor(name, weight) {
+                this.name = name;
+                this.weight = weight;
+            }
+            setName() {
+                setName = this.name;
+            }
+            setWeight() {
+                setWeight = this.weight;
+            }
+            getName() {
+                return this.name;
+            }
+            getWeight() {
+                return this.weight;
+            }
+            toString() {
+                return this.name + this.weight;
+            }
+            changName(changName) {
+                this.name = changName;
+            }
+        }
+
+        let objAnimal1 = new Animal('Elephant', 45.6);
+
+        objAnimal1.toString();
+
+        let objAnimal2 = new Animal('', 1);
+
+        objAnimal2.changName('Mouse');
+
+        console.log(objAnimal1);
+
+        console.log(objAnimal2);
+
+    </script>
+</body>
+
+</html>

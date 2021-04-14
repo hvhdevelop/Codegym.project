@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 3: Kiểm tra chuỗi ký tự</title>
+</head>
+
+<body>
+    <script>
+
+        function check(mang) {
+            var nguyen_am = ['a', 'o', 'e', 'u', 'i'];
+            var count = 0;
+            var checked = '';
+            for (let i = 0; i < mang.length; i++) {
+                for (let y = 0; y < nguyen_am.length; y++) {
+                    if (mang[i] == nguyen_am[y]) {
+                        count++;
+                        checked += mang[i] + ',';
+                    }
+                }
+            }
+            if (count != 0) {
+                document.write(`có ${count} ký tự nguyên âm là: ${checked}`);
+            } else {
+                alert('FALSE');
+            }
+        }
+        var mang = ['a', 2, 'o', 3, 'e', 4, 'g', 'h', 'i', 'u', 'x', 'y', 'z'];
+        check(mang);
+    </script>
+</body>
+
+</html>
